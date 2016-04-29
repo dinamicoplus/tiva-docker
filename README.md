@@ -2,7 +2,7 @@
 
 This repository contains **Dockerfile** to set an enviroment for developers of **Tiva C series TM4C123GXL Launchpad** from Texas Instrument. Basically it follows setup instructions from [chrisrm.com](http://chrisrm.com/howto-develop-on-the-ti-tiva-launchpad-using-linux/).
 
-### Base Docker Image: [ubuntu:14.04](https://registry.hub.docker.com/u/library/ubuntu/)
+#### Base Docker Image: [ubuntu:14.04](https://registry.hub.docker.com/u/library/ubuntu/)
 
 ## Installation
 
