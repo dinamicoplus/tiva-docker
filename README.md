@@ -12,13 +12,14 @@ This repository contains **Dockerfile** to set an enviroment for developers of *
 
 3. Go to [Tiva C Series Software](http://software-dl.ti.com/tiva-c/SW-TM4C/latest/index_FDS.html) and download the “TivaWare for Tiva C Series” package: **SW-TM4C-X.X.X.exe**
 
-4. Set **gnu_tools** and **tivaware_pkg** with the path to the previous downloaded packages respectively:
-`export gnu_tools = <gnu_tools.tar.bz2>
-export tivaware_pkg = <SW-TM4C-X.X.X.exe`
-
-5. Build the image from Dockerfile:
-`docker build --build-arg gnu_tools=$gnu_tools --build_arg tivaware_pkg=$tivaware_pkg -t="dinamicoplus/tiva" github.com/dinamicoplus/tiva-docker`
-
+4. Set **gnu_tools** and **tivaware_pkg** with the path to the previous downloaded packages respectively and build the image from Dockerfile:
+```
+   export gnu_tools = <gnu_tools.tar.bz2>
+   export tivaware_pkg = <SW-TM4C-X.X.X.exe>
+```
+```
+   docker build --build-arg gnu_tools=$gnu_tools --build_arg tivaware_pkg=$tivaware_pkg -t="dinamicoplus/tiva" github.com/dinamicoplus/tiva-docker
+```
 ## Usage
 
 `docker run -i -r dinamicoplus/tiva`
