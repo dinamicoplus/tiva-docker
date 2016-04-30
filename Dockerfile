@@ -15,16 +15,13 @@ RUN apt-get install -y libusb-1.0-0 libusb-1.0-0-dev
 RUN apt-get install -y wget vim git unzip pkg-config
 
 RUN mkdir ~/Embedded
-COPY $gnu_tools.tar.bz2 .
-RUN tar -xvf $(echo $gnu_tools).tar.bz2 -C ~/Embedded
+COPY $gnu_tools .
+RUN tar -xvf $gnu_tools -C ~/Embedded
 RUN mkdir ~/Embedded/tivaware
 COPY $tivaware_pkg . 
 RUN unzip $tivaware_pkg -d ~/Embedded/tivaware
 
-ENV PATH $PATH:/root/Embedded/$gnu_tools/bin
-RUN echo $PATH
-
-RUN cd ~/Embedded/tivaware && make
+RUN export PATH=$PATH:/root/Embedded/$(tar -tf $gnu_tools | head -1 | awk -F'/' '{print $1}')/bin && cd ~/Embedded/tivaware && make
 
 RUN cd ~/Embedded && git clone https://github.com/uctools/tiva-template.git
 
