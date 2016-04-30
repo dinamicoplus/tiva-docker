@@ -2,6 +2,7 @@ FROM ubuntu:14.04
 
 MAINTAINER Marcos Brito <marbri91@gmail.com>
 
+WORKDIR .
 ARG gnu_tools
 ARG tivaware_pkg
 
