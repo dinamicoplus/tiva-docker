@@ -20,11 +20,11 @@ This repository contains **Dockerfile** to set an enviroment for developers of *
 
 5. Set **gnu_tools** and **tivaware_pkg** with the path to the previous downloaded packages respectively and build the image from Dockerfile:
 ```
-   export gnu_tools = <gnu_tools.tar.bz2>
-   export tivaware_pkg = <SW-TM4C-X.X.X.exe>
+   export gnu_tools=<gnu_tools.tar.bz2>
+   export tivaware_pkg=<SW-TM4C-X.X.X.exe>
 ```
 ```
-   docker build --build-arg gnu_tools=$gnu_tools --build_arg tivaware_pkg=$tivaware_pkg -t="dinamicoplus/tiva" .
+   docker build --build-arg gnu_tools=$gnu_tools --build-arg tivaware_pkg=$tivaware_pkg -t="dinamicoplus/tiva" .
 ```
 ## Usage
 
